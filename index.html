@@ -1,0 +1,2057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Somasundharam Weds Aishwarya</title>
+<meta name="description" content="Wedding invitation of Somasundharam and Aishwarya">
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Italianno&family=Noto+Serif+Tamil:wght@400;500;600&family=Noto+Serif+Telugu:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap");
+
+:root{
+  --maroon:#681c2d;
+  --deep:#3c1020;
+  --gold:#d6a84f;
+  --gold2:#f2d58a;
+  --cream:#fff8ea;
+  --paper:#fffdf8;
+  --green:#315845;
+  --shadow:0 20px 60px rgba(62,20,25,.16);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  background:var(--cream);
+  color:var(--deep);
+  font-family:"Cormorant Garamond",Georgia,serif;
+  overflow-x:hidden;
+}
+
+body.tamil{
+  font-family:"Noto Serif Tamil","Cormorant Garamond",serif
+}
+
+body.telugu{
+  font-family:"Noto Serif Telugu","Cormorant Garamond",serif
+}
+
+button{
+  font:inherit
+}
+
+section{
+  position:relative
+}
+
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.lang-switch{
+  position:fixed;
+  z-index:50;
+  top:18px;
+  right:18px;
+  display:flex;
+  gap:5px;
+  padding:6px;
+  border:1px solid rgba(214,168,79,.55);
+  border-radius:999px;
+  background:rgba(255,250,238,.9);
+  backdrop-filter:blur(12px);
+  box-shadow:0 8px 25px rgba(0,0,0,.08)
+}
+
+.lang-switch button{
+  border:0;
+  background:transparent;
+  color:var(--maroon);
+  padding:7px 11px;
+  border-radius:999px;
+  cursor:pointer;
+  font-weight:700;
+  font-size:12px
+}
+
+.lang-switch button.active{
+  background:var(--maroon);
+  color:#fff8ea
+}
+
+
+/* =========================
+   WEDDING FLORAL / PETALS
+========================= */
+
+#opening,
+.hero,
+.venue,
+footer{
+  isolation:isolate;
+}
+
+#opening::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(255,214,125,.24),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(151,36,58,.14),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 82% 80%,
+      rgba(214,168,79,.16),
+      transparent 26%
+    );
+}
+
+#opening::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  opacity:.38;
+  background-image:
+    radial-gradient(
+      circle,
+      rgba(214,168,79,.45) 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle,
+      rgba(104,28,45,.22) 1px,
+      transparent 1.5px
+    );
+  background-size:38px 38px,57px 57px;
+  background-position:0 0,17px 21px;
+  mask-image:linear-gradient(to bottom,black,transparent 80%);
+}
+
+.petal-layer{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  pointer-events:none;
+  overflow:hidden
+}
+
+.petal{
+  position:absolute;
+  top:-10vh;
+  left:var(--x);
+  width:var(--size);
+  height:calc(var(--size) * 1.45);
+  background:linear-gradient(145deg,#e7a36d,#9e3043);
+  border-radius:75% 25% 70% 30% / 70% 35% 65% 30%;
+  opacity:var(--opacity);
+  transform:rotate(var(--rot));
+  filter:drop-shadow(0 4px 5px rgba(67,18,28,.12));
+  animation:petalFall var(--duration) linear infinite;
+  animation-delay:var(--delay);
+}
+
+.petal:nth-child(3n){
+  background:linear-gradient(145deg,#f0c56f,#b54b3d)
+}
+
+.petal:nth-child(4n){
+  background:linear-gradient(145deg,#fff0cf,#d6a84f)
+}
+
+.petal:nth-child(5n){
+  background:linear-gradient(145deg,#d96c62,#751d35)
+}
+
+@keyframes petalFall{
+  0%{
+    transform:translate3d(0,-12vh,0) rotate(var(--rot));
+    opacity:0
+  }
+
+  10%{
+    opacity:var(--opacity)
+  }
+
+  35%{
+    transform:
+      translate3d(
+        calc(var(--drift) * .35),
+        35vh,
+        0
+      )
+      rotate(calc(var(--rot) + 120deg))
+  }
+
+  70%{
+    transform:
+      translate3d(
+        calc(var(--drift) * -.45),
+        75vh,
+        0
+      )
+      rotate(calc(var(--rot) + 260deg))
+  }
+
+  100%{
+    transform:
+      translate3d(
+        var(--drift),
+        120vh,
+        0
+      )
+      rotate(calc(var(--rot) + 420deg));
+    opacity:0
+  }
+}
+
+.petal-main{
+  position:fixed;
+  z-index:15
+}
+
+
+/* =========================
+   HERO BACKGROUND
+========================= */
+
+.hero{
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(255,226,159,.22),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 8% 80%,
+      rgba(104,28,45,.08),
+      transparent 24%
+    ),
+    linear-gradient(
+      180deg,
+      #fffdf7 0%,
+      #fff7e9 100%
+    );
+}
+
+.hero::before,
+.venue::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.35;
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(214,168,79,.2),
+      transparent 13%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(104,28,45,.10),
+      transparent 16%
+    ),
+    radial-gradient(
+      circle at 15% 90%,
+      rgba(104,28,45,.08),
+      transparent 15%
+    ),
+    radial-gradient(
+      circle at 85% 85%,
+      rgba(214,168,79,.18),
+      transparent 16%
+    );
+}
+
+
+/* =========================
+   OPENING SCREEN
+========================= */
+
+#opening{
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(214,168,79,.12),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      #fffaf0 0%,
+      #f8eddc 100%
+    );
+
+  overflow:hidden;
+}
+
+#opening:before{
+  content:"";
+  position:absolute;
+  width:min(78vw,520px);
+  height:min(78vw,520px);
+  border:1px solid rgba(104,28,45,.18);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 14px rgba(214,168,79,.06),
+    0 0 0 28px rgba(104,28,45,.035);
+}
+
+#opening:after{
+  content:"";
+  position:absolute;
+  width:min(64vw,420px);
+  height:min(64vw,420px);
+  border:1px dashed rgba(214,168,79,.42);
+  border-radius:50%;
+  transform:rotate(45deg);
+}
+
+.open-card{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+  padding:35px 24px;
+}
+
+
+/* Opening ornament */
+
+.open-card .ornament{
+  width:145px;
+  height:28px;
+  margin:0 auto 22px;
+  position:relative;
+}
+
+.open-card .ornament:before,
+.open-card .ornament:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  width:52px;
+  height:1px;
+  background:var(--gold);
+}
+
+.open-card .ornament:before{
+  left:0
+}
+
+.open-card .ornament:after{
+  right:0
+}
+
+.open-card .ornament span{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:
+    translate(-50%,-50%)
+    rotate(45deg);
+  width:10px;
+  height:10px;
+  border:1px solid var(--gold);
+  background:#fff8ea;
+}
+
+
+/* Om symbol */
+
+.om{
+  font-size:25px;
+  color:var(--maroon);
+  letter-spacing:4px;
+  margin-bottom:16px;
+}
+
+
+/* Opening small text */
+
+.open-card .small{
+  font-size:12px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:#86643d;
+  margin-bottom:16px;
+}
+
+
+/* Opening title */
+
+.open-card h1{
+  font-family:"Cinzel", serif !important;
+  font-size:clamp(42px,8vw,76px);
+  font-weight:400;
+  line-height:1;
+  letter-spacing:.04em;
+  color:var(--maroon);
+  margin:12px 0 15px;
+}
+
+/* Opening subtitle */
+
+.open-card .sub{
+  font-size:16px;
+  line-height:1.7;
+  color:#725239;
+  max-width:480px;
+  margin:0 auto 28px;
+}
+
+
+/* Tap button */
+
+.tap{
+  width: 140px;
+  height:140px;
+
+  border:1.5px solid var(--gold);
+  border-radius:50%;
+
+  background:#741d35;
+  color:#fff8ea;
+
+  cursor:pointer;
+
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:1px;
+
+  box-shadow:
+    0 0 0 8px rgba(214,168,79,.08),
+    0 10px 28px rgba(104,28,45,.20);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.tap:hover{
+  transform:scale(1.03);
+
+  box-shadow:
+    0 0 0 10px rgba(214,168,79,.10),
+    0 14px 34px rgba(104,28,45,.28);
+}
+
+.tap:active{
+  transform:scale(.90);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+#main{
+  display:none
+}
+
+.hero{
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:100px 20px 70px;
+
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(214,168,79,.18),
+      transparent 20%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(104,28,45,.1),
+      transparent 25%
+    ),
+    var(--paper);
+}
+
+
+/* Mandala */
+
+.mandala{
+  position:absolute;
+  width:min(80vw,650px);
+  aspect-ratio:1;
+  border-radius:50%;
+  border:1px solid rgba(214,168,79,.35);
+
+  box-shadow:
+    0 0 0 18px rgba(214,168,79,.04),
+    0 0 0 36px rgba(214,168,79,.03);
+
+  animation:slowspin 55s linear infinite
+}
+
+.mandala:before,
+.mandala:after{
+  content:"";
+  position:absolute;
+  inset:10%;
+  border:1px dashed rgba(214,168,79,.35);
+  border-radius:50%
+}
+
+.mandala:after{
+  inset:20%;
+  border-style:solid
+}
+
+@keyframes slowspin{
+  to{
+    transform:rotate(360deg)
+  }
+}
+
+.hero-content{
+  position:relative;
+  z-index:2
+}
+
+.hero .blessing{
+  font-size:14px;
+  letter-spacing:3px;
+  color:#8b6c46;
+  text-transform:uppercase
+}
+
+h1,h2,h3,h4,h5,h6,
+.section-title,
+.events-heading,
+.event .title,
+.names,
+.couple-names,
+.hero-names,
+.open-title,
+.open-subtitle{
+  color:#3c1020 !important;
+}
+
+/* Somasundharam Weds Aishwarya */
+.names{
+  font-family:"Italianno","Playfair Display",serif !important;
+  font-size:clamp(48px,9vw,96px);
+  font-weight:400;
+  line-height:.95;
+  letter-spacing:.02em;
+  color:#3c1020 !important;
+}
+
+.weds{
+  font-family:"Cinzel","Playfair Display",serif !important;
+  font-size:19px;
+  font-weight:500;
+  letter-spacing:6px;
+  text-transform:uppercase;
+  color:#d6a84f !important;
+}
+
+.invite{
+  max-width:650px;
+  margin:24px auto 0;
+  font-size:18px;
+  line-height:1.8;
+  color:#604a37
+}
+
+.scroll-cue{
+  margin-top:45px;
+  color:#9a7b55;
+  font-size:12px;
+  letter-spacing:2px
+}
+
+.scroll-cue span{
+  display:block;
+  font-size:26px;
+  margin-top:8px;
+  animation:bounce 1.6s infinite
+}
+
+@keyframes bounce{
+  50%{
+    transform:translateY(8px)
+  }
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.wrap{
+  max-width:1050px;
+  margin:auto;
+  padding:90px 22px
+}
+
+.section-title{
+  text-align:center;
+  font-family:"Bodoni Moda",Georgia,serif;
+  font-weight:500;
+  color:var(--maroon);
+  font-size:clamp(30px,5vw,48px);
+  margin-bottom:12px
+}
+
+.section-kicker{
+  text-align:center;
+  color:#9b7d57;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  font-size:12px;
+  margin-bottom:50px
+}
+
+
+/* Timeline */
+
+/* =========================
+   ARTISTIC WEDDING TIMELINE
+========================= */
+
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:65px auto 0;
+  padding:10px 0;
+}
+
+/* Central golden temple-style line */
+
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:2px;
+  transform:translateX(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      var(--gold) 8%,
+      var(--gold) 92%,
+      transparent
+    );
+
+  opacity:.65;
+}
+
+/* Small decorative points on the center line */
+
+.timeline:after{
+  content:"✦";
+  position:absolute;
+  left:50%;
+  top:-20px;
+
+  transform:translateX(-50%);
+
+  color:var(--gold);
+  font-size:18px;
+
+  background:var(--cream);
+  padding:5px 8px;
+}
+
+
+/* =========================
+   EVENT ITEM
+========================= */
+
+.event{
+  width:50%;
+  padding:0 55px 65px;
+  position:relative;
+}
+
+.event:nth-child(odd){
+  text-align:right;
+}
+
+.event:nth-child(even){
+  margin-left:50%;
+}
+
+
+/* =========================
+   GOLDEN ORNAMENT AT CENTER
+========================= */
+
+.event:after{
+  content:"✦";
+
+  position:absolute;
+  top:22px;
+
+  width:27px;
+  height:27px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--cream);
+  border:1px solid var(--gold);
+
+  color:var(--maroon);
+  font-size:11px;
+
+  box-shadow:
+    0 0 0 5px rgba(214,168,79,.08),
+    0 4px 12px rgba(104,28,45,.12);
+
+  z-index:3;
+}
+
+.event:nth-child(odd):after{
+  right:-14px;
+}
+
+.event:nth-child(even):after{
+  left:-14px;
+}
+
+
+/* =========================
+   ARTISTIC EVENT CARD
+========================= */
+
+.event-card{
+  position:relative;
+
+  padding:30px 30px 28px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,253,247,.98),
+      rgba(250,240,218,.92)
+    );
+
+  border:1px solid rgba(214,168,79,.65);
+
+  border-radius:6px 24px 6px 24px;
+
+  box-shadow:
+    0 15px 35px rgba(70,35,20,.08),
+    inset 0 0 0 5px rgba(255,255,255,.45);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease;
+}
+
+
+/* Decorative inner border */
+
+.event-card:before{
+  content:"";
+
+  position:absolute;
+  inset:8px;
+
+  border:1px solid rgba(214,168,79,.28);
+
+  border-radius:3px 18px 3px 18px;
+
+  pointer-events:none;
+}
+
+
+/* Small ornamental corners */
+
+.event-card:after{
+  content:"❧";
+
+  position:absolute;
+
+  top:8px;
+  color:var(--gold);
+
+  font-size:18px;
+
+  opacity:.75;
+}
+
+.event:nth-child(odd) .event-card:after{
+  left:12px;
+  transform:scaleX(-1);
+}
+
+.event:nth-child(even) .event-card:after{
+  right:12px;
+}
+
+
+/* Hover */
+
+.event-card:hover{
+  transform:translateY(-6px);
+
+  box-shadow:
+    0 20px 45px rgba(70,35,20,.13),
+    0 0 0 1px rgba(214,168,79,.18);
+}
+
+
+/* =========================
+   EVENT TITLE
+========================= */
+
+.event h3{
+  position:relative;
+  z-index:2;
+
+  font-family:
+    "Cinzel",
+    "Playfair Display",
+    serif;
+
+  font-weight:500;
+
+  font-size:26px;
+
+  letter-spacing:1px;
+
+  color:var(--maroon) !important;
+
+  margin-bottom:12px;
+}
+
+
+/* =========================
+   DATE
+========================= */
+
+.date{
+  position:relative;
+  z-index:2;
+
+  display:inline-block;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:18px;
+
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  color:var(--green);
+
+  margin-bottom:6px;
+}
+
+
+/* Small gold line underneath date */
+
+.date:after{
+  content:"";
+
+  display:block;
+
+  width:35px;
+  height:1px;
+
+  background:var(--gold);
+
+  margin-top:6px;
+}
+
+.event:nth-child(odd) .date:after{
+  margin-left:auto;
+}
+
+
+/* =========================
+   TIME
+========================= */
+
+.time{
+  position:relative;
+  z-index:2;
+
+  font-size:16px;
+
+  color:#785d43;
+
+  letter-spacing:.5px;
+}
+
+
+/* =========================
+   ALTERNATING CARD SHAPE
+========================= */
+
+.event:nth-child(even) .event-card{
+  border-radius:24px 6px 24px 6px;
+}
+
+.event:nth-child(even) .event-card:before{
+  border-radius:18px 3px 18px 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:650px){
+
+  .timeline{
+    margin-top:45px;
+    padding-left:0;
+  }
+
+  .timeline:before{
+    left:15px;
+    transform:none;
+  }
+
+  .timeline:after{
+    left:15px;
+    transform:translateX(-50%);
+  }
+
+  .event,
+  .event:nth-child(even){
+    width:100%;
+    margin:0;
+
+    padding:
+      0
+      0
+      35px
+      48px;
+
+    text-align:left;
+  }
+
+  .event:nth-child(odd):after,
+  .event:nth-child(even):after{
+    left:1px;
+    right:auto;
+  }
+
+  .event-card{
+    padding:27px 24px;
+  }
+
+  .event h3{
+    font-size:23px;
+  }
+
+  .event:nth-child(odd) .date:after{
+    margin-left:0;
+  }
+
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdown-section{
+  background:var(--maroon);
+  color:#fff8ea;
+  text-align:center
+}
+
+.countdown-section .section-title{
+  color:#fff8ea
+}
+
+.countdown-section .section-kicker{
+  color:var(--gold2)
+}
+
+.countdown{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap
+}
+
+.unit{
+  min-width:105px;
+  padding:18px 14px;
+  border:1px solid rgba(242,213,138,.45);
+  border-radius:18px;
+  background:rgba(255,255,255,.06)
+}
+
+.unit strong{
+  display:block;
+  font-size:42px;
+  color:var(--gold2);
+  line-height:1
+}
+
+.unit span{
+  display:block;
+  font-size:11px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-top:7px
+}
+
+.target-note{
+  margin-top:24px;
+  color:#f3dfb2;
+  font-size:14px
+}
+
+
+/* =========================
+   VENUE
+========================= */
+
+.venue{
+  background:
+    linear-gradient(
+      180deg,
+      #fffdf8,
+      #f7edd9
+    )
+}
+
+.venue-card{
+  max-width:780px;
+  margin:auto;
+  text-align:center;
+  padding:45px 25px;
+  border-radius:28px;
+  border:1px solid rgba(214,168,79,.45);
+  background:#fffaf0;
+  box-shadow:var(--shadow)
+}
+
+.venue-icon{
+  font-size:42px;
+  margin-bottom:12px
+}
+
+.venue-card h3{
+  font-family:"Bodoni Moda",Georgia,serif;
+  font-weight:500;
+  font-size:34px;
+  color:var(--maroon);
+  margin-bottom:12px
+}
+
+.venue-card p{
+  color:#6c523d;
+  line-height:1.7;
+  margin-bottom:22px
+}
+
+.map-btn{
+  display:inline-block;
+  text-decoration:none;
+  background:var(--maroon);
+  color:#fff8ea;
+  padding:14px 26px;
+  border-radius:999px;
+  border:1px solid var(--gold);
+  transition:.3s
+}
+
+.map-btn:hover{
+  transform:translateY(-3px)
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  min-height:70svh;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  padding:70px 20px;
+  background:var(--deep);
+  color:#fff8ea;
+  overflow:hidden
+}
+
+.footer-inner{
+  max-width:700px
+}
+
+.footer-om{
+  font-size:36px;
+  color:var(--gold2);
+  margin-bottom:15px
+}
+
+.footer-title{
+  font-family:"Great Vibes","Bodoni Moda",cursive;
+  font-weight:400;
+  font-size:clamp(48px,9vw,82px);
+  color:var(--gold2);
+  margin-bottom:18px
+}
+
+.footer-text{
+  font-size:19px;
+  line-height:1.8;
+  color:#f4e5c5
+}
+
+.footer-names{
+  font-family:"Bodoni Moda",Georgia,serif;
+  margin-top:30px;
+  font-size:27px;
+  color:#fff8ea
+}
+
+.footer-line{
+  width:100px;
+  height:1px;
+  background:var(--gold);
+  margin:28px auto
+}
+
+
+/* Reveal animation */
+
+.reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:
+    opacity .9s ease,
+    transform .9s ease
+}
+
+.reveal.visible{
+  opacity:1;
+  transform:none
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     LANGUAGE SWITCHER
+========================= -->
+
+<div class="lang-switch" aria-label="Language selector">
+  <button class="active" data-lang="en">EN</button>
+  <button data-lang="ta">தமிழ்</button>
+  <button data-lang="te">తెలుగు</button>
+</div>
+
+
+<!-- =========================
+     OPENING SCREEN
+========================= -->
+
+<section id="opening">
+
+  <div class="open-card">
+
+    <div class="ornament" aria-hidden="true"><span></span></div>
+    
+    <div class="small" data-i18n="openingBlessing">
+      A Celebration of Love
+    </div>
+
+    <h1 data-i18n="inviteTitle">
+        A Sacred Beginning
+    </h1>
+    <p class="sub" data-i18n="tapHint">
+      You are warmly invited to celebrate our wedding
+    </p>
+
+    <button class="tap" id="openBtn" data-i18n="tapOpen">Tap to Open</button>
+    
+
+    <div class="hint" data-i18n="tapBelow">
+      Enter our Celebration
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
+
+<main id="main">
+
+  <div class="petal-layer petal-main" aria-hidden="true"></div>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="mandala"></div>
+
+    <div class="hero-content reveal">
+
+      <div class="blessing" data-i18n="heroKicker">
+        With the blessings of the Almighty and our families
+      </div>
+
+      <div class="names">
+        Somasundharam
+        <br>
+        <span class="weds">Weds</span>
+        <br>
+        Aishwarya
+      </div>
+
+      <p class="invite" data-i18n="heroInvite">
+        With hearts full of joy, we invite you to join us as we begin our beautiful journey together.
+        Your presence and blessings will make our celebration truly special.
+      </p>
+
+      <div class="scroll-cue" data-i18n="scroll">
+        Scroll to discover our wedding details
+        <span>↓</span>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WEDDING EVENTS -->
+
+  <section class="wrap">
+
+    <h2 class="section-title reveal" data-i18n="eventsTitle">
+      Wedding Celebrations
+    </h2>
+
+    <div class="section-kicker reveal" data-i18n="eventsKicker">
+      A few beautiful moments to celebrate together
+    </div>
+
+
+    <div class="timeline">
+
+      <article class="event reveal">
+
+        <div class="event-card">
+
+          <h3 data-i18n="reception">
+            Reception
+          </h3>
+
+          <div class="date" data-i18n="oct31">
+            October 31
+          </div>
+
+          <div class="time">
+            6:30 PM onwards
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="event reveal">
+
+        <div class="event-card">
+
+          <h3 data-i18n="dinner">
+            Dinner
+          </h3>
+
+          <div class="date" data-i18n="oct31b">
+            October 31
+          </div>
+
+          <div class="time">
+            7:30 PM onwards
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="event reveal">
+
+        <div class="event-card">
+
+          <h3 data-i18n="muhurtham">
+            Muhurtham
+          </h3>
+
+          <div class="date" data-i18n="nov1">
+            November 1
+          </div>
+
+          <div class="time">
+            4:30 AM – 6:00 AM
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <article class="event reveal">
+
+        <div class="event-card">
+
+          <h3 data-i18n="breakfast">
+            Breakfast
+          </h3>
+
+          <div class="date" data-i18n="nov1b">
+            November 1
+          </div>
+
+          <div class="time">
+            7:30 AM onwards
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- COUNTDOWN -->
+
+  <section class="countdown-section">
+
+    <div class="wrap">
+
+      <h2 class="section-title reveal" data-i18n="countTitle">
+        Counting Down to Our Muhurtham
+      </h2>
+
+      <div class="section-kicker reveal" data-i18n="countKicker">
+        Until we say our sacred vows
+      </div>
+
+
+      <div class="countdown reveal" aria-live="polite">
+
+        <div class="unit">
+          <strong id="days">00</strong>
+          <span data-i18n="days">Days</span>
+        </div>
+
+        <div class="unit">
+          <strong id="hours">00</strong>
+          <span data-i18n="hours">Hours</span>
+        </div>
+
+        <div class="unit">
+          <strong id="minutes">00</strong>
+          <span data-i18n="minutes">Minutes</span>
+        </div>
+
+        <div class="unit">
+          <strong id="seconds">00</strong>
+          <span data-i18n="seconds">Seconds</span>
+        </div>
+
+      </div>
+
+
+      <p class="target-note" data-i18n="countNote">
+        November 1, 2026 · 4:30 AM
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- VENUE -->
+
+  <section class="venue">
+
+    <div class="wrap">
+
+      <h2 class="section-title reveal" data-i18n="venueTitle">
+        Wedding Venue
+      </h2>
+
+      <div class="section-kicker reveal" data-i18n="venueKicker">
+        We would love to celebrate with you
+      </div>
+
+
+      <div class="venue-card reveal">
+
+        <div class="venue-icon">
+          🪷
+        </div>
+
+        <h3 data-i18n="venueName">
+          Annamalai Wedding Hall
+        </h3>
+
+        <p data-i18n="venueAddress">
+          Annamalai Wedding Hall
+        </p>
+
+        <a
+          class="map-btn"
+          target="_blank"
+          rel="noopener"
+          href="https://share.google/hkkA8VQprcXlKwObv"
+          data-i18n="viewLocation"
+        >
+          View Location
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="footer-inner reveal">
+
+      <div class="footer-om">
+        ॐ
+      </div>
+
+      <div class="footer-title" data-i18n="footerTitle">
+        Hearty Welcome
+      </div>
+
+      <p class="footer-text" data-i18n="footerText">
+        Come share our joy, bless our new beginning, and make our wedding memories even more beautiful with your presence.
+      </p>
+
+      <div class="footer-line"></div>
+
+      <div class="footer-names">
+        Somasundharam ♥ Aishwarya
+      </div>
+
+    </div>
+
+  </footer>
+
+</main>
+
+
+<script>
+
+/* =========================
+   TRANSLATIONS
+========================= */
+
+const translations = {
+
+  en:{
+
+    openingBlessing:"With the blessings of Lord Ganesha",
+
+    inviteTitle:"A Sacred Beginning",
+
+    tapHint:"You are warmly invited to celebrate our wedding",
+
+    tapOpen:"Tap to Open",
+
+    tapBelow:"Tap and begin our story",
+
+    heroKicker:
+      "With the blessings of the Almighty and our families",
+
+    heroInvite:
+      "With hearts full of joy, we invite you to join us as we begin our beautiful journey together. Your presence and blessings will make our celebration truly special.",
+
+    scroll:
+      "Scroll to discover our wedding details",
+
+    eventsTitle:
+      "Wedding Celebrations",
+
+    eventsKicker:
+      "A few beautiful moments to celebrate together",
+
+    reception:"Reception",
+
+    dinner:"Dinner",
+
+    muhurtham:"Muhurtham",
+
+    breakfast:"Breakfast",
+
+    oct31:"October 31",
+
+    oct31b:"October 31",
+
+    nov1:"November 1",
+
+    nov1b:"November 1",
+
+    countTitle:
+      "Counting Down to Our Muhurtham",
+
+    countKicker:
+      "Until we say our sacred vows",
+
+    days:"Days",
+
+    hours:"Hours",
+
+    minutes:"Minutes",
+
+    seconds:"Seconds",
+
+    countNote:
+      "November 1, 2026 · 4:30 AM",
+
+    venueTitle:
+      "Wedding Venue",
+
+    venueKicker:
+      "We would love to celebrate with you",
+
+    venueName:
+      "Annamalai Wedding Hall",
+
+    venueAddress:
+      "Annamalai Wedding Hall",
+
+    viewLocation:
+      "View Location",
+
+    footerTitle:
+      "Hearty Welcome",
+
+    footerText:
+      "Come share our joy, bless our new beginning, and make our wedding memories even more beautiful with your presence."
+
+  },
+
+
+  ta:{
+
+    openingBlessing:
+      "விநாயகப் பெருமானின் அருளாசியுடன்",
+
+    inviteTitle:
+      "இனிய தொடக்கம்",
+
+    tapHint:
+      "எங்கள் திருமண விழாவை சிறப்பிக்க உங்களை அன்புடன் அழைக்கிறோம்",
+
+    tapOpen:
+      "திறக்க தட்டவும்",
+
+    tapBelow:
+      "தட்டி எங்கள் கதையை தொடங்குங்கள்",
+
+    heroKicker:
+      "இறைவனின் அருளுடனும் எங்கள் குடும்பத்தினரின் ஆசிகளுடனும்",
+
+    heroInvite:
+      "எங்கள் வாழ்க்கையின் புதிய பயணத்தை தொடங்கும் இந்த இனிய தருணத்தில் தாங்கள் வருகை தந்து, எங்களை ஆசீர்வதித்து விழாவை சிறப்பிக்குமாறு அன்புடன் அழைக்கிறோம்.",
+
+    scroll:
+      "எங்கள் திருமண நிகழ்வுகளை காண கீழே செல்லுங்கள்",
+
+    eventsTitle:
+      "திருமண நிகழ்வுகள்",
+
+    eventsKicker:
+      "நாம் அனைவரும் இணைந்து கொண்டாடும் இனிய தருணங்கள்",
+
+    reception:
+      "வரவேற்பு",
+
+    dinner:
+      "இரவு உணவு",
+
+    muhurtham:
+      "முகூர்த்தம்",
+
+    breakfast:
+      "காலை உணவு",
+
+    oct31:
+      "அக்டோபர் 31",
+
+    oct31b:
+      "அக்டோபர் 31",
+
+    nov1:
+      "நவம்பர் 1",
+
+    nov1b:
+      "நவம்பர் 1",
+
+    countTitle:
+      "எங்கள் முகூர்த்தத்திற்கான கவுண்ட்டவுன்",
+
+    countKicker:
+      "திருமண பந்தத்தில் இணையும் அந்த இனிய தருணம் வரை",
+
+    days:
+      "நாட்கள்",
+
+    hours:
+      "மணிநேரம்",
+
+    minutes:
+      "நிமிடங்கள்",
+
+    seconds:
+      "விநாடிகள்",
+
+    countNote:
+      "நவம்பர் 1, 2026 · காலை 4:30",
+
+    venueTitle:
+      "திருமண நடைபெறும் இடம்",
+
+    venueKicker:
+      "தங்களுடன் இணைந்து கொண்டாட ஆவலுடன் காத்திருக்கிறோம்",
+
+    venueName:
+      "அண்ணாமலை திருமண மண்டபம்",
+
+    venueAddress:
+      "இங்கு திருமண மண்டபத்தின் பெயர் மற்றும் முழு முகவரியை சேர்க்கவும்.",
+
+    viewLocation:
+      "இருப்பிடத்தை காண",
+
+    footerTitle:
+      "மனமார்ந்த வரவேற்பு",
+
+    footerText:
+      "எங்கள் மகிழ்ச்சியில் கலந்து கொண்டு, எங்கள் புதிய தொடக்கத்தை ஆசீர்வதித்து, உங்கள் வருகையால் எங்கள் திருமண நினைவுகளை இன்னும் அழகாக்குங்கள்."
+
+  },
+
+
+  te:{
+
+    openingBlessing:
+      "శ్రీ విఘ్నేశ్వరుని ఆశీస్సులతో",
+
+    inviteTitle:
+      "ఒక శుభారంభం",
+
+    tapHint:
+      "మా వివాహ వేడుకను ఆనందంగా జరుపుకోవడానికి మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము",
+
+    tapOpen:
+      "తెరవడానికి ట్యాప్ చేయండి",
+
+    tapBelow:
+      "ట్యాప్ చేసి మా కథను ప్రారంభించండి",
+
+    heroKicker:
+      "భగవంతుని ఆశీస్సులతో మరియు మా కుటుంబ సభ్యుల ఆశీర్వాదాలతో",
+
+    heroInvite:
+      "మా జీవితంలోని కొత్త ప్రయాణాన్ని ప్రారంభించే ఈ శుభ వేళకు విచ్చేసి, మీ ఆశీస్సులతో మా వివాహ వేడుకను మరింత ప్రత్యేకంగా చేయమని మిమ్మల్ని హృదయపూర్వకంగా ఆహ్వానిస్తున్నాము.",
+
+    scroll:
+      "మా వివాహ వేడుక వివరాల కోసం క్రిందికి స్క్రోల్ చేయండి",
+
+    eventsTitle:
+      "వివాహ వేడుకలు",
+
+    eventsKicker:
+      "మనమందరం కలిసి ఆనందంగా జరుపుకునే మధురమైన సందర్భాలు",
+
+    reception:
+      "రిసెప్షన్",
+
+    dinner:
+      "విందు",
+
+    muhurtham:
+      "ముహూర్తం",
+
+    breakfast:
+      "ఉపాహారం",
+
+    oct31:
+      "అక్టోబర్ 31",
+
+    oct31b:
+      "అక్టోబర్ 31",
+
+    nov1:
+      "నవంబర్ 1",
+
+    nov1b:
+      "నవంబర్ 1",
+
+    countTitle:
+      "మా ముహూర్తానికి కౌంట్‌డౌన్",
+
+    countKicker:
+      "మేము పవిత్రమైన వివాహ బంధంలో అడుగుపెట్టే వరకు",
+
+    days:
+      "రోజులు",
+
+    hours:
+      "గంటలు",
+
+    minutes:
+      "నిమిషాలు",
+
+    seconds:
+      "సెకన్లు",
+
+    countNote:
+      "నవంబర్ 1, 2026 · ఉదయం 4:30",
+
+    venueTitle:
+      "వివాహ వేదిక",
+
+    venueKicker:
+      "మీతో కలిసి ఈ శుభ వేడుకను జరుపుకోవాలని ఎంతో ఆసక్తిగా ఎదురుచూస్తున్నాము",
+
+    venueName:
+      "అన్నామలై వెడ్డింగ్ హాల్",
+
+    venueAddress:
+      "ఇక్కడ వివాహ వేదిక పేరు మరియు పూర్తి చిరునామాను జోడించండి.",
+
+    viewLocation:
+      "వేదికను చూడండి",
+
+    footerTitle:
+      "హృదయపూర్వక స్వాగతం",
+
+    footerText:
+      "మా ఆనందంలో భాగస్వాములు అయి, మా కొత్త జీవిత ఆరంభాన్ని ఆశీర్వదించి, మీ రాకతో మా వివాహ జ్ఞాపకాలను మరింత అందంగా చేయండి."
+
+  }
+
+};
+
+
+/* =========================
+   FALLING PETALS
+========================= */
+
+function createPetals(){
+
+  const layers =
+    document.querySelectorAll(".petal-layer");
+
+  layers.forEach(layer=>{
+
+    for(let i=0;i<28;i++){
+
+      const petal =
+        document.createElement("span");
+
+      petal.className="petal";
+
+      petal.style.setProperty(
+        "--x",
+        (Math.random()*100)+"%"
+      );
+
+      petal.style.setProperty(
+        "--size",
+        (7+Math.random()*13)+"px"
+      );
+
+      petal.style.setProperty(
+        "--duration",
+        (8+Math.random()*12)+"s"
+      );
+
+      petal.style.setProperty(
+        "--delay",
+        (-Math.random()*18)+"s"
+      );
+
+      petal.style.setProperty(
+        "--drift",
+        (-120+Math.random()*240)+"px"
+      );
+
+      petal.style.setProperty(
+        "--rot",
+        (Math.random()*360)+"deg"
+      );
+
+      petal.style.setProperty(
+        "--opacity",
+        (0.35+Math.random()*0.45).toFixed(2)
+      );
+
+      layer.appendChild(petal);
+
+    }
+
+  });
+
+}
+
+createPetals();
+
+
+/* =========================
+   LANGUAGE
+========================= */
+
+let currentLang="en";
+
+function setLanguage(lang){
+
+  currentLang=lang;
+
+  document.documentElement.lang =
+    lang==="ta"
+      ? "ta"
+      : lang==="te"
+        ? "te"
+        : "en";
+
+  document.body.className =
+    lang==="ta"
+      ? "tamil"
+      : lang==="te"
+        ? "telugu"
+        : "";
+
+  document
+    .querySelectorAll("[data-i18n]")
+    .forEach(el=>{
+
+      const key=el.dataset.i18n;
+
+      if(translations[lang][key]){
+        el.textContent =
+          translations[lang][key];
+      }
+
+    });
+
+  document
+    .querySelectorAll(".lang-switch button")
+    .forEach(button=>{
+
+      button.classList.toggle(
+        "active",
+        button.dataset.lang===lang
+      );
+
+    });
+
+}
+
+
+document
+  .querySelectorAll(".lang-switch button")
+  .forEach(btn=>{
+
+    btn.addEventListener(
+      "click",
+      ()=>{
+        setLanguage(btn.dataset.lang);
+      }
+    );
+
+  });
+
+
+/* =========================
+   OPEN WEBSITE
+========================= */
+
+document
+  .getElementById("openBtn")
+  .addEventListener("click",()=>{
+
+    document
+      .getElementById("opening")
+      .style.display="none";
+
+    document
+      .getElementById("main")
+      .style.display="block";
+
+    window.scrollTo(0,0);
+
+    revealNow();
+
+  });
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+const target =
+  new Date(
+    "2026-11-01T04:30:00+05:30"
+  ).getTime();
+
+
+function updateCountdown(){
+
+  const diff =
+    Math.max(
+      0,
+      target-Date.now()
+    );
+
+  const d =
+    Math.floor(
+      diff/86400000
+    );
+
+  const h =
+    Math.floor(
+      (diff%86400000)/3600000
+    );
+
+  const m =
+    Math.floor(
+      (diff%3600000)/60000
+    );
+
+  const s =
+    Math.floor(
+      (diff%60000)/1000
+    );
+
+
+  document
+    .getElementById("days")
+    .textContent =
+      String(d).padStart(2,"0");
+
+  document
+    .getElementById("hours")
+    .textContent =
+      String(h).padStart(2,"0");
+
+  document
+    .getElementById("minutes")
+    .textContent =
+      String(m).padStart(2,"0");
+
+  document
+    .getElementById("seconds")
+    .textContent =
+      String(s).padStart(2,"0");
+
+}
+
+updateCountdown();
+
+setInterval(
+  updateCountdown,
+  1000
+);
+
+
+/* =========================
+   REVEAL ANIMATION
+========================= */
+
+function revealNow(){
+
+  const obs =
+    new IntersectionObserver(
+      entries=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            entry.target
+              .classList
+              .add("visible");
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.12
+      }
+    );
+
+
+  document
+    .querySelectorAll(".reveal")
+    .forEach(el=>{
+
+      obs.observe(el);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
